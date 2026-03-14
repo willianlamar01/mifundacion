@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fundacion Rafael Nadal - Ayudas Humanitarias. Recibe apoyo economico de nuestra fundacion.">
+  <meta name="author" content="Fundacion Rafael Nadal">
+  <title>Fundacion Rafael Nadal - Ayudas Humanitarias</title>
+  <link rel="icon" type="image/x-icon" href="fundacion.ico">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .aviso-rd-banner {
+      background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+      color: #fff;
+      padding: 0;
+      position: relative;
+      z-index: 9999;
+      overflow: hidden;
+      border-bottom: 4px solid #fbbf24;
+      box-shadow: 0 4px 20px rgba(185,28,28,0.5);
+    }
+    .aviso-rd-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px);
+      pointer-events: none;
+    }
+    .aviso-rd-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .aviso-rd-icon-wrap {
+      flex-shrink: 0;
+      width: 54px;
+      height: 54px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      border: 2px solid rgba(255,255,255,0.3);
+      animation: pulseRD 2s infinite;
+    }
+    @keyframes pulseRD {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(251,191,36,0.5); }
+      50% { box-shadow: 0 0 0 10px rgba(251,191,36,0); }
+    }
+    .aviso-rd-content { flex: 1; min-width: 220px; }
+    .aviso-rd-titulo {
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      margin: 0 0 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .aviso-rd-titulo::before, .aviso-rd-titulo::after { content: '⚠'; font-size: 0.9em; }
+    .aviso-rd-texto { font-size: 0.95rem; line-height: 1.5; margin: 0; color: #fef2f2; }
+    .aviso-rd-texto strong { color: #ffffff; font-weight: 800; }
+    .aviso-rd-flag { flex-shrink: 0; text-align: center; font-size: 0.75rem; color: rgba(255,255,255,0.7); line-height: 1.3; }
+    .aviso-rd-flag span { display: block; font-size: 2.2rem; line-height: 1; margin-bottom: 2px; }
+    @media (max-width: 600px) {
+      .aviso-rd-inner { padding: 14px 16px; gap: 12px; }
+      .aviso-rd-titulo { font-size: 0.85rem; }
+      .aviso-rd-texto { font-size: 0.85rem; }
+      .aviso-rd-flag { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== AVISO IMPORTANTE: NO APLICA REPÚBLICA DOMINICANA ===== -->
+  <div class="aviso-rd-banner" role="alert">
+    <div class="aviso-rd-inner">
+      <div class="aviso-rd-icon-wrap">🚫</div>
+      <div class="aviso-rd-content">
+        <p class="aviso-rd-titulo">Aviso Importante — Restriccion de Pais</p>
+        <p class="aviso-rd-texto">
+          Las ayudas humanitarias de la Fundacion Rafael Nadal
+          <strong>NO aplican para residentes de la Republica Dominicana.</strong>
+          Si usted se encuentra en territorio dominicano, lamentablemente no puede participar en este programa.
+          Disculpe los inconvenientes.
+        </p>
+      </div>
+      <div class="aviso-rd-flag">
+        <span>🇩🇴</span>
+        No disponible
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="header-container">
+      <div class="logo-area">
+        <div class="logo-circle">RN</div>
+        <div class="logo-text">
+          <span class="logo-title">FUNDACION</span>
+          <span class="logo-name">RAFAEL NADAL</span>
+        </div>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#ayudas">Ayudas</a></li>
+          <li><a href="#tabla">Tabla</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#solicitar">Solicitar</a></li>
+          <li><a href="#solicitar" class="btn-nav">Aplicar Ahora</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">&#9670; Programa Oficial de Ayuda 2026 &#9670;</p>
+      <h1 class="hero-titulo">FUNDACION<br><span>RAFAEL NADAL</span></h1>
+      <p class="hero-descripcion">
+        Comprometidos con brindar ayuda humanitaria a quienes mas lo necesitan.<br>
+        Juntos construimos un mundo mas justo y solidario.
+      </p>
+      <div class="hero-botones">
+        <a href="#tabla" class="btn-primary">Ver Tabla de Ayudas</a>
+        <a href="#solicitar" class="btn-secondary">Solicitar Ahora</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>&#8595;</span></div>
+  </section>
+
+  <!-- ===== ESTADISTICAS ===== -->
+  <section class="estadisticas">
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-numero">+12,000</span>
+        <span class="stat-label">Familias Beneficiadas</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-numero">47</span>
+        <span class="stat-label">Paises con Presencia</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-numero">$2.5M+</span>
+        <span class="stat-label">Ayudas Otorgadas</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-numero">15</span>
+        <span class="stat-label">Anos de Servicio</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUE OFRECEMOS ===== -->
+  <section id="ayudas" class="ayudas">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Nuestros Servicios</p>
+        <h2>¿Que Ofrecemos?</h2>
+        <p class="section-desc">La Fundacion Rafael Nadal ofrece ayudas economicas directas a personas y familias en situacion de vulnerabilidad a nivel mundial.</p>
+      </div>
+      <div class="ayudas-grid">
+        <div class="ayuda-card">
+          <div class="ayuda-icono">&#128176;</div>
+          <h3>Ayuda Economica Directa</h3>
+          <p>Transferencias directas de dinero para cubrir necesidades basicas urgentes como alimentacion, vivienda y salud.</p>
+        </div>
+        <div class="ayuda-card">
+          <div class="ayuda-icono">&#127979;</div>
+          <h3>Apoyo Educativo</h3>
+          <p>Becas y fondos para garantizar el acceso a la educacion de ninos y jovenes en situacion de pobreza.</p>
+        </div>
+        <div class="ayuda-card">
+          <div class="ayuda-icono">&#127973;</div>
+          <h3>Asistencia Medica</h3>
+          <p>Apoyo economico para acceder a atencion medica, medicamentos y tratamientos esenciales.</p>
+        </div>
+        <div class="ayuda-card">
+          <div class="ayuda-icono">&#128736;</div>
+          <h3>Emergencias Humanitarias</h3>
+          <p>Respuesta rapida ante desastres naturales y emergencias que afectan a comunidades vulnerables.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TABLA DE BENEFICIOS ===== -->
+  <section id="tabla" class="tabla-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Programa Oficial</p>
+        <h2>Tabla de Beneficios</h2>
+        <p class="section-desc">Conoce los montos de ayuda disponibles y los impuestos de gestion correspondientes. Proceso 100% transparente y verificado.</p>
+      </div>
+
+      <div class="tabla-wrapper">
+        <div class="tabla-top-banner">
+          <div class="banner-logo">RN</div>
+          <div class="banner-text">
+            <h3>FUNDACION RAFAEL NADAL</h3>
+            <p>Programa Oficial de Ayudas Humanitarias &bull; 2026</p>
+          </div>
+          <div class="banner-badge">&#10003; Verificado</div>
+        </div>
+
+        <div class="tabla-columnas">
+          <!-- COLUMNA IZQUIERDA: Dinero a Recibir -->
+          <div class="columna izquierda">
+            <div class="columna-header izq-header">
+              <span class="col-icon">&#128176;</span>
+              <h3>Dinero a Recibir</h3>
+              <p>Monto de la ayuda humanitaria</p>
+            </div>
+            <ul class="columna-lista">
+              <li class="lista-item"><span class="monto-badge">01</span><span class="monto-valor">$5,000 dolares</span></li>
+              <li class="lista-item"><span class="monto-badge">02</span><span class="monto-valor">$10,000 dolares</span></li>
+              <li class="lista-item"><span class="monto-badge">03</span><span class="monto-valor">$20,000 dolares</span></li>
+              <li class="lista-item"><span class="monto-badge">04</span><span class="monto-valor">$30,000 dolares</span></li>
+              <li class="lista-item"><span class="monto-badge">05</span><span class="monto-valor">$40,000 dolares</span></li>
+              <li class="lista-item"><span class="monto-badge">06</span><span class="monto-valor">$50,000 dolares</span></li>
+              <li class="lista-item"><span class="monto-badge">07</span><span class="monto-valor">$60,000 dolares</span></li>
+              <li class="lista-item"><span class="monto-badge">08</span><span class="monto-valor">$70,000 dolares</span></li>
+              <li class="lista-item"><span class="monto-badge">09</span><span class="monto-valor">$80,000 dolares</span></li>
+            </ul>
+          </div>
+
+          <!-- DIVISOR -->
+          <div class="columna-divisor">
+            <div class="divisor-linea"></div>
+            <div class="divisor-icon">=</div>
+            <div class="divisor-linea"></div>
+          </div>
+
+          <!-- COLUMNA DERECHA: Impuestos a Pagar -->
+          <div class="columna derecha">
+            <div class="columna-header der-header">
+              <span class="col-icon">&#128203;</span>
+              <h3>Impuesto a Pagar</h3>
+              <p>Gestion administrativa unica</p>
+            </div>
+            <ul class="columna-lista">
+              <li class="lista-item der"><span class="impuesto-valor">200 dolares</span><span class="impuesto-badge">&#10003;</span></li>
+              <li class="lista-item der"><span class="impuesto-valor">300 dolares</span><span class="impuesto-badge">&#10003;</span></li>
+              <li class="lista-item der"><span class="impuesto-valor">400 dolares</span><span class="impuesto-badge">&#10003;</span></li>
+              <li class="lista-item der"><span class="impuesto-valor">500 dolares</span><span class="impuesto-badge">&#10003;</span></li>
+              <li class="lista-item der"><span class="impuesto-valor">600 dolares</span><span class="impuesto-badge">&#10003;</span></li>
+              <li class="lista-item der"><span class="impuesto-valor">700 dolares</span><span class="impuesto-badge">&#10003;</span></li>
+              <li class="lista-item der"><span class="impuesto-valor">800 dolares</span><span class="impuesto-badge">&#10003;</span></li>
+              <li class="lista-item der"><span class="impuesto-valor">900 dolares</span><span class="impuesto-badge">&#10003;</span></li>
+              <li class="lista-item der"><span class="impuesto-valor">1,000 dolares</span><span class="impuesto-badge">&#10003;</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tabla-nota">
+          <span>&#9432;</span>
+          El impuesto es un pago unico de gestion administrativa. Una vez realizado, recibes tu ayuda en un plazo de 24 a 72 horas habiles.
+        </div>
+
+        <!-- AVISO IMPORTANTE: METODOS DE PAGO -->
+        <div class="tabla-aviso-pago">
+          <div class="aviso-pago-header">
+            <span class="aviso-pago-icon">&#9888;</span>
+            <h4>MENSAJE IMPORTANTE</h4>
+            <span class="aviso-pago-icon">&#9888;</span>
+          </div>
+          <p class="aviso-pago-texto">
+            Los impuestos de gestion se pagan <strong>unicamente</strong> a traves de agencias de envio de dinero autorizadas. Aceptamos las siguientes:
+          </p>
+          <div class="aviso-pago-agencias">
+            <div class="agencia-item">
+              <svg class="agencia-logo" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="40" rx="4" fill="#FFDD00"/>
+                <text x="60" y="16" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="#1a1a1a" text-anchor="middle">WESTERN</text>
+                <text x="60" y="28" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="#1a1a1a" text-anchor="middle">UNION</text>
+                <rect x="8" y="32" width="104" height="3" rx="1" fill="#000"/>
+              </svg>
+              <span>Western Union</span>
+            </div>
+            <div class="agencia-item">
+              <svg class="agencia-logo" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="40" rx="4" fill="#003087"/>
+                <circle cx="20" cy="20" r="12" fill="#e8c84c"/>
+                <text x="16" y="24" font-family="Arial,sans-serif" font-size="11" font-weight="900" fill="#003087">C</text>
+                <text x="38" y="16" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="#ffffff" text-anchor="start">CARIBE</text>
+                <text x="38" y="27" font-family="Arial,sans-serif" font-size="7" font-weight="700" fill="#e8c84c" text-anchor="start">EXPRESS</text>
+              </svg>
+              <span>Caribe Express</span>
+            </div>
+            <div class="agencia-item">
+              <svg class="agencia-logo" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="40" rx="4" fill="#e2001a"/>
+                <text x="60" y="17" font-family="Arial,sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">MONEY</text>
+                <text x="60" y="30" font-family="Arial,sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">GRAM</text>
+                <circle cx="10" cy="20" r="5" fill="#ffffff" opacity="0.3"/>
+                <circle cx="110" cy="20" r="5" fill="#ffffff" opacity="0.3"/>
+              </svg>
+              <span>MoneyGram</span>
+            </div>
+            <div class="agencia-item">
+              <svg class="agencia-logo" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="40" rx="4" fill="#ff6600"/>
+                <text x="60" y="17" font-family="Arial,sans-serif" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle">RIA</text>
+                <text x="60" y="30" font-family="Arial,sans-serif" font-size="7" font-weight="600" fill="#ffffff" text-anchor="middle">MONEY TRANSFER</text>
+              </svg>
+              <span>Ria Money Transfer</span>
+            </div>
+            <div class="agencia-item">
+              <svg class="agencia-logo" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="40" rx="4" fill="#1a2b6b"/>
+                <rect x="8" y="12" width="20" height="16" rx="3" fill="#4fd1c5"/>
+                <text x="75" y="25" font-family="Arial,sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">Remitly</text>
+              </svg>
+              <span>Remitly</span>
+            </div>
+          </div>
+          <p class="aviso-pago-alerta">
+            <span>&#128274;</span>
+            <strong>IMPORTANTE:</strong> La Fundacion Rafael Nadal <strong>NUNCA</strong> solicita pagos por criptomonedas, tarjetas de regalo ni transferencias bancarias directas. Si alguien te lo pide, reportalo de inmediato a nuestro WhatsApp oficial.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section id="testimonios" class="testimonios">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Historias Reales</p>
+        <h2>Lo Que Dicen Nuestros Beneficiarios</h2>
+        <p class="section-desc">Personas reales que recibieron su ayuda y cumplieron con su impuesto de gestion. Sus historias nos inspiran a seguir.</p>
+      </div>
+
+      <div class="testimonios-grid" id="testimoniosGrid">
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Recibi $20,000 dolares despues de pagar mis $400 de gestion. En menos de 48 horas el dinero estaba en mi cuenta. Gracias a la Fundacion pude salvar mi negocio y dar trabajo a mi familia. Son completamente legales y confiables."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Carlos Mendoza" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Carlos Mendoza</strong><span>Bogota, Colombia</span><span class="test-monto">Recibio: $20,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card destacado">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Yo era muy desconfiada al principio, pero una amiga me recomendo la fundacion. Solicite $30,000 dolares, pague los $500 de impuesto y en 3 dias tenia el dinero. Pude pagar la operacion de mi madre. Dios bendiga a Rafael Nadal por esta obra."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Maria Lopez" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Maria Lopez</strong><span>Ciudad de Mexico, Mexico</span><span class="test-monto">Recibio: $30,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Solicite los $50,000 dolares porque tenia una deuda grande. Pague los $700 de gestion sin problemas. El proceso fue rapido, el equipo me guio en todo momento. Hoy estoy libre de deudas gracias a la Fundacion Rafael Nadal."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face" alt="Juan Rodriguez" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Juan Rodriguez</strong><span>Lima, Peru</span><span class="test-monto">Recibio: $50,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Como madre soltera con 3 hijos, necesitaba ayuda urgente. Aplique por $10,000 dolares, pague $300 de impuesto y recibi el dinero rapido. Con eso pague el arriendo y la escuela de mis hijos. Esta fundacion es una bendicion del cielo."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face" alt="Ana Gutierrez" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Ana Gutierrez</strong><span>Santo Domingo, Rep. Dominicana</span><span class="test-monto">Recibio: $10,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Mi esposo perdio el trabajo y estabamos desesperados. Un vecino nos conto de la fundacion. Aplicamos por $40,000, pagamos $600 de gestion y recibimos el dinero en 2 dias. Ahora tenemos nuestro propio negocio. 100% recomendado."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=face" alt="Sofia Vargas" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Sofia Vargas</strong><span>Buenos Aires, Argentina</span><span class="test-monto">Recibio: $40,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Estaba pasando por una crisis economica fuerte. Aplique por $5,000 dolares para empezar. Pague los $200 de impuesto y todo salio perfecto. El proceso es transparente, hay un equipo que te acompana en cada paso. Ya recomende la fundacion a toda mi familia."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Pedro Castillo" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Pedro Castillo</strong><span>Caracas, Venezuela</span><span class="test-monto">Recibio: $5,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Nunca pense que una fundacion seria tan seria y responsable. Solicite $15,000 dolares, pague el impuesto correspondiente y en 2 dias el dinero llego a mi cuenta. Pude comprar los materiales para terminar mi casa. Mil gracias."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&h=80&fit=crop&crop=face" alt="Luis Herrera" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Luis Herrera</strong><span>Medellin, Colombia</span><span class="test-monto">Recibio: $15,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card destacado">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Soy enfermera y mis ahorros no alcanzaban para pagar las deudas del hospital donde trabajo. La Fundacion Rafael Nadal me ayudo con $25,000 dolares. Pague $400 de gestion y todo fue perfecto. Les debo mucho a ellos."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" alt="Carmen Torres" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Carmen Torres</strong><span>Santiago, Chile</span><span class="test-monto">Recibio: $25,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Perdi todo en un incendio y no sabia a quien acudir. Un familiar me hablo de esta fundacion. Aplique por $30,000 dolares, pague los $500 de impuesto y en 72 horas tenia el dinero. Hoy tengo un nuevo hogar gracias a ellos."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=80&h=80&fit=crop&crop=face" alt="Roberto Sanchez" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Roberto Sanchez</strong><span>Guayaquil, Ecuador</span><span class="test-monto">Recibio: $30,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Soy agricultor y la sequia destruyo mis cosechas. Gracias a la ayuda de $20,000 dolares de la fundacion pude recuperarme y sembrar de nuevo. Pague los $400 de gestion sin problema. Proceso honesto y transparente."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=80&h=80&fit=crop&crop=face" alt="Miguel Flores" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Miguel Flores</strong><span>Tegucigalpa, Honduras</span><span class="test-monto">Recibio: $20,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Mi hijo necesitaba una operacion urgente y no tenia el dinero. Aplique a la fundacion por $40,000 dolares. Pague $600 de impuesto y recibimos el dinero al dia siguiente. Mi hijo hoy esta sano gracias a la Fundacion Rafael Nadal."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=80&h=80&fit=crop&crop=face" alt="Patricia Morales" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Patricia Morales</strong><span>Panama City, Panama</span><span class="test-monto">Recibio: $40,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card destacado">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Llevo 3 anos desempleado y con deudas. Encontre la fundacion en internet y aplique. Me sorprendio lo rapido y profesional que fue todo. Recibi $50,000 dolares despues de pagar $700 de gestion. Hoy tengo mi propio negocio de transporte."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face" alt="Ernesto Campos" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Ernesto Campos</strong><span>San Jose, Costa Rica</span><span class="test-monto">Recibio: $50,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Soy estudiante universitaria y queria montar una empresa. Aplique por $10,000 dolares y pague $300 de impuesto. Todo fue increiblemente facil. Hoy mi empresa lleva 6 meses funcionando. La fundacion cambio mi vida para siempre."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?w=80&h=80&fit=crop&crop=face" alt="Valeria Rios" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Valeria Rios</strong><span>Montevideo, Uruguay</span><span class="test-monto">Recibio: $10,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"Mi esposa y yo perdimos nuestros empleos el mismo mes. Fue una situacion muy dificil. Gracias a Dios encontramos la Fundacion Rafael Nadal. Solicitamos $35,000, pagamos $500 de gestion y en 2 dias pudimos respirar de nuevo."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face" alt="Fernando Vega" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Fernando Vega</strong><span>Asuncion, Paraguay</span><span class="test-monto">Recibio: $35,000</span></div>
+          </div>
+        </div>
+        <div class="testimonio-card">
+          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="test-texto">"No tenia trabajo y mis hijos pasaban necesidades. Aplique a la fundacion por $5,000 dolares. Pague los $200 de impuesto y en menos de 48 horas el dinero llego. Ahora tengo una pequeña tienda y mis hijos comen bien. Bendiciones infinitas."</p>
+          <div class="test-persona">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=80&h=80&fit=crop&crop=face" alt="Luisa Mendez" width="60" height="60" loading="lazy">
+            <div class="test-info"><strong>Luisa Mendez</strong><span>La Paz, Bolivia</span><span class="test-monto">Recibio: $5,000</span></div>
+          </div>
+        </div>
+      </div><!-- fin testimonios-grid -->
+
+      <!-- ===== SECCION DEJAR OPINION ===== -->
+      <div class="opiniones-seccion">
+        <div class="opiniones-header">
+          <span class="opiniones-icon">&#128172;</span>
+          <div>
+            <h3>&#191;Ya recibiste tu ayuda? &#161;Comparte tu experiencia!</h3>
+            <p>Tu testimonio inspira a otras personas. Cuentanos como te ayudo la Fundacion Rafael Nadal.</p>
+          </div>
+        </div>
+
+        <form id="opinionForm" class="opinion-form" novalidate>
+          <div class="opinion-form-row">
+            <div class="form-group">
+              <label for="op-nombre">Tu Nombre *</label>
+              <input type="text" id="op-nombre" placeholder="Ej: Maria Garcia" required>
+              <span class="error-msg" id="error-op-nombre"></span>
+            </div>
+            <div class="form-group">
+              <label for="op-ciudad">Ciudad y Pais *</label>
+              <input type="text" id="op-ciudad" placeholder="Ej: New York, Estados Unidos" required>
+              <span class="error-msg" id="error-op-ciudad"></span>
+            </div>
+            <div class="form-group">
+              <label for="op-monto">Monto que Recibiste *</label>
+              <select id="op-monto" required>
+                <option value="">-- Selecciona --</option>
+                <option value="$5,000">$5,000 dolares</option>
+                <option value="$10,000">$10,000 dolares</option>
+                <option value="$20,000">$20,000 dolares</option>
+                <option value="$30,000">$30,000 dolares</option>
+                <option value="$40,000">$40,000 dolares</option>
+                <option value="$50,000">$50,000 dolares</option>
+                <option value="$60,000">$60,000 dolares</option>
+                <option value="$70,000">$70,000 dolares</option>
+                <option value="$80,000">$80,000 dolares</option>
+              </select>
+              <span class="error-msg" id="error-op-monto"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="op-comentario">Tu Comentario *</label>
+            <textarea id="op-comentario" rows="3" placeholder="Cuentanos tu experiencia con la Fundacion..." required></textarea>
+            <span class="error-msg" id="error-op-comentario"></span>
+          </div>
+          <div class="opinion-form-footer">
+            <div class="op-estrellas" id="opEstrellas">
+              <span>Calificacion:</span>
+              <button type="button" class="star-btn" data-val="1">&#9733;</button>
+              <button type="button" class="star-btn" data-val="2">&#9733;</button>
+              <button type="button" class="star-btn" data-val="3">&#9733;</button>
+              <button type="button" class="star-btn" data-val="4">&#9733;</button>
+              <button type="button" class="star-btn" data-val="5">&#9733;</button>
+            </div>
+            <button type="submit" class="btn-opinion">&#128172; Publicar Comentario</button>
+          </div>
+          <span class="error-msg" id="error-op-stars"></span>
+        </form>
+        <div id="comentariosPublicos"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL ADMIN -->
+  <div id="adminModal" style="display:none;" class="admin-modal-overlay">
+    <div class="admin-modal-box">
+      <h3>&#128274; Panel de Administrador</h3>
+      <p>Ingresa la clave para eliminar comentarios</p>
+      <input type="password" id="adminClave" placeholder="Contrasena admin" class="admin-input">
+      <span class="error-msg" id="error-admin"></span>
+      <div class="admin-modal-btns">
+        <button id="adminCancelar" class="btn-admin-cancel">Cancelar</button>
+        <button id="adminConfirmar" class="btn-admin-confirm">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FORMULARIO DE SOLICITUD ===== -->
+  <section id="solicitar" class="formulario-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Aplicar Ahora</p>
+        <h2>Solicita Tu Ayuda</h2>
+        <p class="section-desc">Completa el formulario y te contactaremos por WhatsApp para guiarte en el proceso. Es rapido, seguro y confidencial.</p>
+      </div>
+
+      <div class="formulario-wrapper">
+        <div class="formulario-info">
+          <h3>¿Como funciona?</h3>
+          <div class="paso">
+            <div class="paso-num">1</div>
+            <div class="paso-texto">
+              <strong>Completa el formulario</strong>
+              <p>Ingresa tus datos personales y selecciona el monto que deseas recibir.</p>
+            </div>
+          </div>
+          <div class="paso">
+            <div class="paso-num">2</div>
+            <div class="paso-texto">
+              <strong>Recibe confirmacion</strong>
+              <p>Te contactamos por WhatsApp para verificar tu solicitud y guiarte.</p>
+            </div>
+          </div>
+          <div class="paso">
+            <div class="paso-num">3</div>
+            <div class="paso-texto">
+              <strong>Paga el impuesto</strong>
+              <p>Realiza el pago unico de gestion segun el monto elegido.</p>
+            </div>
+          </div>
+          <div class="paso">
+            <div class="paso-num">4</div>
+            <div class="paso-texto">
+              <strong>Recibe tu ayuda</strong>
+              <p>En 24 a 72 horas el dinero llega a tu cuenta bancaria.</p>
+            </div>
+          </div>
+          <div class="formulario-whatsapp-info">
+            <span>&#128241;</span>
+            <p>Tu solicitud llegara directamente a nuestro WhatsApp oficial para ser procesada.</p>
+          </div>
+        </div>
+
+        <div class="formulario-box">
+          <form id="solicitudForm" novalidate>
+            <div class="form-group">
+              <label for="nombre">Nombre Completo *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej: Maria Lopez" required>
+              <span class="error-msg" id="error-nombre"></span>
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido *</label>
+              <input type="text" id="apellido" name="apellido" placeholder="Ej: Rodriguez" required>
+              <span class="error-msg" id="error-apellido"></span>
+            </div>
+            <div class="form-group">
+              <label for="ciudad">Ciudad y Pais *</label>
+              <input type="text" id="ciudad" name="ciudad" placeholder="Ej: New York, Estados Unidos" required>
+              <span class="error-msg" id="error-ciudad"></span>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Numero de Telefono (WhatsApp) *</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej: +1 895 453 4567" required>
+              <span class="error-msg" id="error-telefono"></span>
+            </div>
+            <div class="form-group">
+              <label for="monto">Monto de Ayuda que Desea *</label>
+              <select id="monto" name="monto" required>
+                <option value="">-- Seleccione un monto --</option>
+                <option value="$5,000 dolares (Impuesto: $200)">$5,000 dolares &rarr; Impuesto: $200</option>
+                <option value="$10,000 dolares (Impuesto: $300)">$10,000 dolares &rarr; Impuesto: $300</option>
+                <option value="$20,000 dolares (Impuesto: $400)">$20,000 dolares &rarr; Impuesto: $400</option>
+                <option value="$30,000 dolares (Impuesto: $500)">$30,000 dolares &rarr; Impuesto: $500</option>
+                <option value="$40,000 dolares (Impuesto: $600)">$40,000 dolares &rarr; Impuesto: $600</option>
+                <option value="$50,000 dolares (Impuesto: $700)">$50,000 dolares &rarr; Impuesto: $700</option>
+                <option value="$60,000 dolares (Impuesto: $800)">$60,000 dolares &rarr; Impuesto: $800</option>
+                <option value="$70,000 dolares (Impuesto: $900)">$70,000 dolares &rarr; Impuesto: $900</option>
+                <option value="$80,000 dolares (Impuesto: $1,000)">$80,000 dolares &rarr; Impuesto: $1,000</option>
+              </select>
+              <span class="error-msg" id="error-monto"></span>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje Adicional (Opcional)</label>
+              <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuentanos brevemente por que necesitas la ayuda..."></textarea>
+            </div>
+            <button type="submit" class="btn-enviar" id="btnEnviar">
+              <span id="btnTexto">&#128232; Enviar Solicitud por WhatsApp</span>
+              <span id="btnLoading" style="display:none;">Enviando...</span>
+            </button>
+            <p class="form-nota">Al enviar, aceptas que tus datos sean usados unicamente para procesar tu solicitud de ayuda humanitaria.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="contacto-section">
+    <div class="container">
+      <div class="contacto-grid">
+        <div class="contacto-item">
+          <span class="contacto-icon">&#128241;</span>
+          <h4>WhatsApp Oficial</h4>
+          <p>+1 843 703 4758</p>
+        </div>
+        <div class="contacto-item">
+          <span class="contacto-icon">&#127758;</span>
+          <h4>Presencia Mundial</h4>
+          <p>47 paises atendidos</p>
+        </div>
+        <div class="contacto-item">
+          <span class="contacto-icon">&#128336;</span>
+          <h4>Horario de Atencion</h4>
+          <p>Lunes a Sabado: 8am - 8pm</p>
+        </div>
+        <div class="contacto-item">
+          <span class="contacto-icon">&#9203;</span>
+          <h4>Respuesta</h4>
+          <p>En menos de 24 horas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-circle small">RN</div>
+            <div>
+              <span class="logo-title">FUNDACION</span>
+              <span class="logo-name">RAFAEL NADAL</span>
+            </div>
+          </div>
+          <p>Comprometidos con la ayuda humanitaria y el bienestar de las personas mas vulnerables alrededor del mundo.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegacion</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#ayudas">Nuestras Ayudas</a></li>
+            <li><a href="#tabla">Tabla de Beneficios</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#solicitar">Solicitar Ayuda</a></li>
+          </ul>
+        </div>
+        <div class="footer-contacto">
+          <h4>Contacto Directo</h4>
+          <a href="https://wa.me/18437034758" target="_blank" rel="noopener noreferrer" class="footer-whatsapp">
+            <span>&#128241;</span> Escribir por WhatsApp
+          </a>
+          <p class="footer-numero">+1 843 703 4758</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Fundacion Rafael Nadal. Todos los derechos reservados.</p>
+        <p>Programa Oficial de Ayudas Humanitarias</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTON FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/18437034758" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <span class="wa-icon">&#128172;</span>
+    <span class="wa-text">WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
